@@ -11,6 +11,7 @@ from util import colour_lookup
 
 CARDS = 'https://kollieflower.github.io/Artifact2/json/Cards.json'
 ABILITIES = 'https://kollieflower.github.io/Artifact2/json/Abilities.json'
+DECK_LINK = 'https://kollieflower.github.io/Artifact2/DeckViewer.html?d='
 
 client = discord.Client()
 
@@ -80,6 +81,11 @@ def findCard(cardQuery, cards, cardType, partialMatch=False):
                     return [keyword, keywords[keyword]]
                 else:
                     logger.debug('No partial match found for keyword query: ' + str(cardQuery))
+
+def getDeckDetails(deckQuery,author):
+    emb_text = "["+deckQuery+"]("+DECK_LINK + deckQuery + ")"+"\n from {}".format(author.mention)
+    embed=discord.Embed(title="New deck code by "+str(author.name), color=0xffff00, description=emb_text)
+    return embed
 
 def getCardDetails(cardQuery, cards, cardType, forUnit=False):
     logger.debug('Getting card details')
@@ -308,6 +314,15 @@ async def on_message(message):
             logger.debug('Displaying usage')
             await message.channel.send('```To lookup a card: [cardname]\nTo lookup an ability: [abilityname|a] or [abilityname|ability]\nTo lookup a keyword: [keywordname|k] or [keywordname|keyword]\nTo display this help page: [help]```')
             return
+        if cardQuery[0:6].lower()=="rtfact":
+            deck_link = message.content[1:-1]
+            logger.info('Sending Deck Link for: '+deck_link)
+            embed = getDeckDetails(deck_link,message.author)
+            try:
+                await message.channel.send(embed=embed)
+            except Exception as e:
+                logger.error(e)
+            return
         logger.info('Message Content contains cardQuery: ' + cardQuery)
         cardQuery = cardQuery.split('|')
         cards = fetchCards()
@@ -327,10 +342,8 @@ async def on_message(message):
             logger.debug('Set card type to: ' + cardType)
             cardQuery = cardQuery[0]
             logger.debug('Set card query to: ' + cardQuery)
-
         logger.info('Getting card details')
         embed = getCardDetails(cardQuery, cards, cardType)
-
         try:
             await message.channel.send(embed=embed)
         except Exception as e:
