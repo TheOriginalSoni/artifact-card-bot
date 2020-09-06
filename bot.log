@@ -1,0 +1,10 @@
+2020-09-07 03:54:31,532 - __main__ - INFO - Starting Bot
+2020-09-07 03:54:36,707 - __main__ - INFO - We have logged in as Artifact-CardBot-Soni#5370
+2020-09-07 03:54:59,441 - __main__ - INFO - Message Content contains cardQuery: rix
+2020-09-07 03:55:02,209 - __main__ - INFO - Getting card details
+2020-09-07 03:55:02,209 - __main__ - INFO - Searching for card with exact match of query: rix
+2020-09-07 03:55:02,210 - __main__ - INFO - rix matches query: rix. Returning card
+2020-09-07 03:55:02,210 - __main__ - INFO - Searching for ability with exact match of query: 210035
+2020-09-07 03:55:02,210 - __main__ - INFO - 210035 matches query: 210035. Returning card
+2020-09-07 03:55:02,211 - __main__ - INFO - Searching for card with exact match of query: 10420
+2020-09-07 03:55:02,212 - __main__ - INFO - 10420 matches query: 10420. Returning card
