@@ -1,0 +1,15 @@
+2020-09-07 02:12:22,891 - __main__ - INFO - Starting Bot
+2020-09-07 02:12:58,405 - __main__ - INFO - Starting Bot
+2020-09-07 02:13:02,901 - __main__ - INFO - We have logged in as Lancebot#8041
+2020-09-07 02:15:11,528 - __main__ - INFO - Message Content contains cardQuery: chen
+2020-09-07 02:15:13,350 - __main__ - INFO - Getting card details
+2020-09-07 02:15:13,350 - __main__ - INFO - Searching for card with exact match of query: chen
+2020-09-07 02:15:13,351 - __main__ - INFO - chen matches query: chen. Returning card
+2020-09-07 02:15:13,351 - __main__ - INFO - Searching for ability with exact match of query: 210078
+2020-09-07 02:15:13,351 - __main__ - INFO - 210078 matches query: 210078. Returning card
+2020-09-07 02:15:13,352 - __main__ - INFO - Searching for ability with exact match of query: 11072
+2020-09-07 02:15:13,352 - __main__ - INFO - 11072 matches query: 11072. Returning card
+2020-09-07 02:15:13,352 - __main__ - INFO - Searching for card with exact match of query: 10340
+2020-09-07 02:15:13,353 - __main__ - INFO - 10340 matches query: 10340. Returning card
+2020-09-07 02:15:31,797 - __main__ - INFO - Sending Deck Link for: RTFACTJW8AtrgC+wEFMRLoAgRxAju+AgM4AWkCkUiOpQGNpAqcBZgxBg__
+2020-09-07 02:16:17,302 - __main__ - INFO - Sending Deck Link for: RTFACTJW8EtrgC+wEFMRLoAgRxAju+AgM4AWkCkUiOpQGNpAqcBZgxBlRlc3Q_

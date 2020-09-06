@@ -1,0 +1,1 @@
+worker: python3 artifact_card_bot.py
